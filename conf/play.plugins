@@ -1,0 +1,13 @@
+666:com.github.tototoshi.play2.flyway.Plugin
+777:scalikejdbc.PlayPlugin
+888:scalikejdbc.PlayFixturePlugin
+1500:com.typesafe.plugin.CommonsMailerPlugin
+9000:index.plugin.IndexPlugin
+9990:secure.DefaultAuthenticatorStore
+9991:secure.DefaultIdGenerator
+9992:utils.validator.DefaultPasswordValidator
+9993:secure.templates.DefaultTemplatesPlugin
+9994:secure.providers.UsernamePasswordProvider
+9995:secure.providers.GitHubProvider
+9996:services.DbUserService
+9997:services.MyEventListener

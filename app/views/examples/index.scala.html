@@ -1,0 +1,105 @@
+@(handler: be.objectify.deadbolt.scala.DeadboltHandler)(implicit request: Request[Any])
+
+
+@main(Messages("index.title")) {
+
+<div class="row">
+    <div class="col-xs-6 col-sm-3">
+        <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+                <li class="nav-header">General</li>
+                <li><a href="#config">Configuration</a></li>
+                <li class="nav-header">Controllers</li>
+                <li><a href="#controller-SubjectPresent">SubjectPresent</a></li>
+                <li><a href="#controller-SubjectNotPresent">SubjectNotPresent</a></li>
+                <li><a href="#controller-Restrict">Restrictions - shorthand version</a></li>
+                <li><a href="#controller-Dynamic">Dynamic</a></li>
+                <li><a href="#controller-Pattern">Pattern</a></li>
+                <li class="nav-header">Templates</li>
+                <li><a href="#template-subjectPresent">@@subjectPresent</a></li>
+                <li><a href="#template-subjectNotPresent">@@subjectNotPresent</a></li>
+                <li><a href="#template-restrict">@@restrict</a></li>
+                <li><a href="#template-dynamic">@@dynamic</a></li>
+                <li><a href="#template-pattern">@@pattern</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-9">
+        <div class="jumbotron">
+            <h1>Deadbolt 2 Scala</h1>
+
+            <p>This is a collection of examples using Deadbolt 2 at both the controller and template level to
+                implement authorisation in a Play 2 application.</p>
+        </div>
+        <div class="row-fluid" id="config">
+            <div class="span10">
+                <h2>Configuration</h2>
+
+                @if(!handler.getSubject(request).isEmpty){
+                <p>For the purposes of these examples, except where stated otherwise, the user has the following
+                    roles:</p>
+                <ul>
+                    @for(role <- handler.getSubject(request).get.getRoles()){
+                    <li>@role.getName</li>
+                    }
+                </ul>
+
+                <p>The user also has the following permissions:</p>
+                <ul>
+                    @for(permission <- handler.getSubject(request).get.getPermissions()){
+                    <li>@permission.getValue</li>
+                    }
+                </ul>
+                }
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span10">
+                <h2>Controller authorisation</h2>
+
+                <p>Protecting your controllers against unauthorised use is a key element of good application
+                    security. Here,
+                    you'll find examples of each of the
+                    controller-level authorisations provided by Deadbolt 2.</p>
+
+                <p>For each example, the action is shown on the left, and the result is loaded into an iframe on the
+                    right.</p>
+            </div>
+        </div>
+
+        @examples.controllers.SubjectPresent()
+        @examples.controllers.SubjectNotPresent()
+        @examples.controllers.Restrict()
+        @examples.controllers.Dynamic()
+        @examples.controllers.Pattern()
+
+        <div class="row-fluid">
+            <div class="span10">
+                <h2>Template authorisation</h2>
+
+                <p>Deadbolt tags does not offer any real protected against misuse on your server side, but it does
+                    allow you
+                    to customise your UI according to the
+                    privileges of the current user.</p>
+
+                <p>Each tag has an "Or" variant, e.g. restrictOr, that allows you to pass in a alternative body for
+                    when
+                    authorisation fails.</p>
+
+                <p>For each example, the unprotected content is on the left, the Deadbolt tag is in the center and
+                    the result
+                    of the authorisation is on the right.</p>
+            </div>
+        </div>
+
+        @examples.templates.SubjectPresent(handler)
+        @examples.templates.SubjectNotPresent(handler)
+        @examples.templates.Restrict(handler)
+        @examples.templates.Dynamic(handler)
+        @examples.templates.Pattern(handler)
+
+    </div>
+</div>
+
+
+}

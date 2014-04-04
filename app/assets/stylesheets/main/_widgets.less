@@ -1,0 +1,64 @@
+// -----------------------------------
+// WIDGETS
+// -----------------------------------
+// author: mda@zenexity.com - 2011
+// -----------------------------------
+
+// --------------------------- OPTIONS
+.recaptcha-widget, #recaptcha-widget {
+  width: 310px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  #recaptcha_image_main {
+    height: auto;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+    a {
+      line-height: 17px;
+      cursor: point;
+    }
+  }
+  .recaptcha-buttons {
+    position: absolute;
+    bottom: 16px;
+    right: 11px;
+    span {
+      position: absolute;
+      left: -99999em;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a {
+      color: #15c;
+      text-decoration: none;
+      display: inline-block;
+      height: 21px;
+      width: 21px;
+      margin-left: 2px;
+      background: #fff;
+      background-position: center center;
+      background-repeat: no-repeat;
+      line-height: 0;
+      opacity: .55;
+    }
+  }
+  .recaptcha-main {
+    position: relative;
+    padding: 5px;
+  }
+  #recaptcha_reload_btn {
+    background: url(/assets/images/main/recaptcha-sprite.png) -63px;
+  }
+  #recaptcha_switch_audio_btn {
+    background: url(/assets/images/main/recaptcha-sprite.png) -42px;
+  }
+  #recaptcha_switch_img_btn {
+    background: url(/assets/images/main/recaptcha-sprite.png) -21px;
+  }
+  #recaptcha_whatsthis_btn {
+    background: url(/assets/images/main/recaptcha-sprite.png);
+  }
+}

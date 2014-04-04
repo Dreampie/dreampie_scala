@@ -1,0 +1,200 @@
+@(title: String)(content: Html)
+
+@import utils.RoutesHelper
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/html" lang="en">
+<head>
+    <title>@title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href='@routes.Assets.at("stylesheets/main.min.css")'>
+    <link rel="shortcut icon" type="image/png" href='@routes.Assets.at("images/favicon.png")'>
+    <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.min.css"))'>
+    <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap-theme.min.css"))'>
+    <link rel="stylesheet" media="screen" href='@routes.WebJarAssets.at(WebJarAssets.locate("css/font-awesome.min.css"))'>
+    <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
+    <script type="text/javascript" src="@routes.JsRouter.javascriptRoutes"></script>
+    <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("underscore-min.js"))'></script>
+    <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("backbone.min.js"))'></script>
+    <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.js"))'></script>
+    <script type='text/javascript' src='@routes.Assets.at("javascripts/main/jquery.unveil.min.js")'></script>
+    <script type='text/javascript' src='@routes.Assets.at("javascripts/main/jquery.scrollUp.min.js")'></script>
+    <!--<script type='text/javascript' src='@routes.Assets.at("javascripts/main/jquery.scrollHide.js")'></script>-->
+</head>
+<body>
+<!-- navbar-header -->
+<div class="navbar navbar-inverse navbar-fixed-top header" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand hidden-sm" href="/">Bootstrap中文网</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">首页</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Bootstrap2中文文档<b
+                            class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="">
+                            <a href="http://v2.bootcss.com/getting-started.html" target="_blank">起步</a>
+                        </li>
+                        <li class="">
+                            <a href="http://v2.bootcss.com/scaffolding.html" target="_blank">脚手架</a>
+                        </li>
+                        <li class="">
+                            <a href="http://v2.bootcss.com/base-css.html" target="_blank">基本CSS样式</a>
+                        </li>
+                        <li class="">
+                            <a href="http://v2.bootcss.com/components.html" target="_blank">组件</a>
+                        </li>
+                        <li class="">
+                            <a href="http://v2.bootcss.com/javascript.html" target="_blank">JavaScript插件</a>
+                        </li>
+                        <li class="">
+                            <a href="http://v2.bootcss.com/customize.html" target="_blank">定制</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Bootstrap3中文文档<b
+                            class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="http://v3.bootcss.com/getting-started/" target="_blank">起步</a>
+                        </li>
+                        <li>
+                            <a href="http://v3.bootcss.com/css/" target="_blank">CSS</a>
+                        </li>
+                        <li>
+                            <a href="http://v3.bootcss.com/components/" target="_blank">组件</a>
+                        </li>
+                        <li>
+                            <a href="http://v3.bootcss.com/javascript/" target="_blank">JavaScript插件</a>
+                        </li>
+                        <li>
+                            <a href="http://v3.bootcss.com/customize/" target="_blank">定制</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/p/lesscss/" target="_blank">Less 教程</a></li>
+                <li><a href="http://jquery.bootcss.com/" target="_blank">jQuery API</a></li>
+                <li><a href="http://expo.bootcss.com" target="_blank">网站实例</a></li>
+                <li><a href="about.html">关于</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- container -->
+<div class="container body">
+    @content
+</div>
+
+
+<!-- /END THE FEATURETTES -->
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-local">
+        <div class="container">
+            <!--<p>本网站所列开源项目的中文版文档全部由<a href="http://www.bootcss.com/">Bootstrap中文网</a>成员翻译整理，并全部遵循 <a-->
+            <!--href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>协议发布。</p>-->
+
+            <!--<p>Powered By <a href="http://www.bootcss.com/" title="Bootstrap中文网">Bootstrap</a> | <a-->
+            <!--href="http://less.bootcss.com/" title="Less中文文档">Less</a> | <a href="http://www.gruntjs.net/"-->
+            <!--title="Grunt中文网">Grunt</a> | <a-->
+            <!--href="http://www.ghostchina.com/" target="_blank" title="Ghost中文网">Ghost</a></p>-->
+
+            <!--<p>-->
+            <div class="row">
+                <div class="col-lg-3">
+                    <h4>新手指南</h4>
+
+                    <ul>
+                        <li><a href="#">注册新用户</a></li>
+                        <li><a href="#">找回密码</a></li>
+                        <li><a href="#">注册新用户</a></li>
+                        <li><a href="#">找回密码</a></li>
+                        <li><a href="#">注册新用户</a></li>
+                        <li><a href="#">找回密码</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Heading</h4>
+
+                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+                        Cras
+                        mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor
+                        mauris
+                        condimentum nibh.</p>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Heading</h4>
+
+                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id
+                        ligula
+                        porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                        nibh,
+                        ut
+                        fermentum massa justo sit amet risus.</p>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Heading</h4>
+
+                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id
+                        ligula
+                        porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                        nibh,
+                        ut
+                        fermentum massa justo sit amet risus.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-global">
+        <div class="container">
+            <a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备11008151号</a>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript">
+    /**
+     * make elements in container el to be compatible with IE6
+     */
+    !function ($) {
+        $(function () {
+//            $(".navbar").scrollHide({
+//                animation: 'fade'// fade, slide, none
+//            });
+            // IE10 viewport hack for Surface/desktop Windows 8 bug
+            //
+            // See Getting Started docs for more information
+            if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+                var msViewportStyle = document.createElement("style");
+                msViewportStyle.appendChild(
+                        document.createTextNode("@@-ms-viewport{width:auto!important}")
+                );
+                document.getElementsByTagName("head")[0].
+                        appendChild(msViewportStyle);
+            }
+
+            $("img.lazy").unveil();
+
+            $.scrollUp({
+                scrollName: 'scrollUp', // Element ID
+                topDistance: '300', // Distance from top before showing element (px)
+                topSpeed: 300, // Speed back to top (ms)
+                animation: 'fade', // Fade, slide, none
+                animationInSpeed: 200, // Animation in speed (ms)
+                animationOutSpeed: 200, // Animation out speed (ms)
+                scrollText: '', // Text for element
+                activeOverlay: false  // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+            });
+        });
+    }(jQuery)
+</script>
+</body>
+</html>

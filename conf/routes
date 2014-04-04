@@ -1,0 +1,84 @@
+# Routes
+# ~~~~
+
+GET     /                                   controllers.Application.index
+
+# Login page
+GET     /login                              controllers.security.UserController.login
+GET     /logout                             controllers.security.UserController.logout
+
+# User Registration and password handling (only needed if you are using UsernamePasswordProvider)
+GET     /signup                     controllers.security.Registration.startSignUp
+POST    /signup                     controllers.security.Registration.handleStartSignUp
+GET     /signup/:token              controllers.security.Registration.signUp(token)
+POST    /signup/:token              controllers.security.Registration.handleSignUp(token)
+GET     /reset                      controllers.security.Registration.startResetPassword
+POST    /reset                      controllers.security.Registration.handleStartResetPassword
+GET     /reset/:token               controllers.security.Registration.resetPassword(token)
+POST    /reset/:token               controllers.security.Registration.handleResetPassword(token)
+
+
+# Providers entry points
+GET     /authenticate/:provider     controllers.security.ProviderController.authenticate(provider, redirectTo: Option[String])
+POST    /authenticate/:provider     controllers.security.ProviderController.authenticateByPost(provider, redirectTo: Option[String])
+GET     /not-authorized             controllers.security.ProviderController.notAuthorized
+
+
+
+
+# The clock Comet stream
+GET     /clock                          controllers.demo.DemoController.clock
+GET     /liveClock                      controllers.demo.ClockController.liveClock
+
+#The chat Room
+GET     /chat                            controllers.demo.ChatRoomController.index
+GET     /room                            controllers.demo.ChatRoomController.chatRoom(username: Option[String])
+GET     /room/chat                       controllers.demo.ChatRoomController.chat(username)
+GET     /assets/javascripts/chatroom.js  controllers.demo.ChatRoomController.chatRoomJs(username: String)
+
+#socketio
+GET     /socketio   controllers.demo.SocketIOController.welcome()
+GET     /socket.io/1/$socketUrl<.*>    controllers.demo.SocketIOController.handler(socketUrl)
+
+# play secure Deadbolt
+GET     /restrict1                  controllers.example.RestrictController.restrictOne
+GET     /restrict2                  controllers.example.RestrictController.restrictTwo
+GET     /restrict3                  controllers.example.RestrictController.restrictThree
+GET     /restrict4                  controllers.example.RestrictController.restrictFour
+GET     /pureLuck                   controllers.example.DynamicRestrictionsController.pureLuck
+GET     /testLuck                   controllers.example.DynamicRestrictionsController.testLuck
+GET     /noWayJose                  controllers.example.DynamicRestrictionsController.noWayJose
+GET     /rhp_roleHolderPresent      controllers.example.SubjectPresentController.loggedIn
+GET     /rhp_roleHolderNotPresent   controllers.example.SubjectPresentController.notLoggedIn
+GET     /rhnp_roleHolderPresent     controllers.example.SubjectNotPresentController.loggedIn
+GET     /rhnp_roleHolderNotPresent  controllers.example.SubjectNotPresentController.notLoggedIn
+GET     /base                       controllers.example.PatternController.base
+GET     /printersEdit               controllers.example.PatternController.printersEdit
+GET     /printersFoo                controllers.example.PatternController.printersFoo
+GET     /printersRegex              controllers.example.PatternController.printersRegex
+
+#demo
+GET     /companies                          controllers.demo.CompanyController.all
+GET     /companies/:id                      controllers.demo.CompanyController.show(id: Long)
+POST    /companies                          controllers.demo.CompanyController.create
+DELETE  /companies/:id                      controllers.demo.CompanyController.delete(id: Long)
+
+GET     /programmers                        controllers.demo.ProgrammerController.all
+GET     /programmers/:id                    controllers.demo.ProgrammerController.show(id: Long)
+POST    /programmers                        controllers.demo.ProgrammerController.create
+DELETE  /programmers/:id                    controllers.demo.ProgrammerController.delete(id: Long)
+POST    /programmers/:id/company/:companyId controllers.demo.ProgrammerController.joinCompany(id: Long, companyId: Long)
+DELETE  /programmers/:id/company            controllers.demo.ProgrammerController.leaveCompany(id: Long)
+POST    /programmers/:id/skills/:skillId    controllers.demo.ProgrammerController.addSkill(id: Long, skillId: Long)
+DELETE  /programmers/:id/skills/:skillId    controllers.demo.ProgrammerController.deleteSkill(id: Long, skillId: Long)
+
+GET     /skills                             controllers.demo.SkillController.all
+GET     /skills/:id                         controllers.demo.SkillController.show(id: Long)
+POST    /skills                             controllers.demo.SkillController.create
+DELETE  /skills/:id                         controllers.demo.SkillController.delete(id: Long)
+
+#static file
+GET     /assets/javascripts/routes          controllers.JsRouter.javascriptRoutes
+GET     /assets/*file                       controllers.Assets.at(path="/public", file)
+GET     /webjars/*file                      controllers.WebJarAssets.at(file)
+

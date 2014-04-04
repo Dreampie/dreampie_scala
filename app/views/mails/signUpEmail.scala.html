@@ -1,0 +1,11 @@
+@(token: String)(implicit request: RequestHeader, lang: Lang)
+@import secure.UserProvider
+<html>
+<body>
+<p>Hello,</p>
+
+<p>Please follow this
+    <a href="@utils.RoutesHelper.signUp(token).absoluteURL(UserProvider.sslEnabled)">link</a> to complete your registration.
+</p>
+</body>
+</html>

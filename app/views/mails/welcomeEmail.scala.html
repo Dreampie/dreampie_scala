@@ -1,0 +1,11 @@
+@(user: models.security.User)(implicit request: RequestHeader, lang: Lang)
+@import secure.UserProvider
+<html>
+<body>
+<p>Welcome @user.firstName,</p>
+
+<p>
+    Your new account is ready.
+    Click <a href="@utils.RoutesHelper.login.absoluteURL(UserProvider.sslEnabled)">here</a> to log in</p>
+</body>
+</html>

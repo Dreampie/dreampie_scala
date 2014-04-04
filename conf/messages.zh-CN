@@ -1,0 +1,70 @@
+# App name
+appName=梦想派
+
+index.title=梦想派官方网站
+
+validation.recaptcha=验证码错误，请重新输入
+# Login page
+login.title=登录
+login.instructions=用你在这里的账号或点击下面这些网站的图标登录
+login.accessDenied=你被拒绝访问你的账号。请允许用该账号登录。
+login.errorLoggingIn=在你登录时系统出错了，请再试一次。
+login.useNameAndPassword=或者输入用户名和密码登录。
+login.useNameAndPasswordOnly=输入用户名和密码登录。
+login.signUp=如果你还没有账号，请先注册
+login.here=这里
+login.invalidCredentials=你输入的是无效的登录凭据
+login.forgotPassword=忘掉密码了？
+
+# Sign up page
+signup.title=注册
+signup.username=用户名
+signup.rememberme=记住帐号?
+signup.firstName=姓
+signup.lastName=名
+signup.email1=Email
+signup.email2=确认Email
+signup.password1=密码
+signup.password2=确认密码
+signup.createAccount=创建账号
+signup.cancel=取消
+signup.userNameAlreadyTaken=该用户名已被占用
+signup.emailAlreadyTaken=该邮箱已被占用
+signup.emailUniversity=该邮箱已被占用
+signup.passwordsDoNotMatch=密码不匹配
+signup.thankYouCheckEmail=谢谢！请到邮箱中查看下一步操作的指令
+signup.invalidLink=你访问的链接无效
+signup.signUpDone=注册成功，欢迎登录
+signup.invalidPassword=至少输入 {0} 个字符
+
+# Password reset
+password.title=重置密码
+password.passwordUpdated=你的密码更新成功了
+password.reset=重置密码
+password.error=在修改你的密码时出了问题，请再试一次。
+
+# Password change
+passwordChange.title=修改密码
+passwordChange.currentPassword=当前密码
+passwordChange.newPassword1=新密码
+passwordChange.newPassword2=确认新密码
+passwordChange.changeButton=修改
+passwordChange.invalidPassword=无效密码
+passwordChange.ok=你们的密码修改成功了
+passwordChange.okButton=Ok
+
+# Not authorized page
+notAuthorized.title=没有授权许可
+notAuthorized.message=你没有访问该页面的授权
+
+#
+loginRequired=请登录后再访问该页面
+
+# Mails
+#
+mails.sendAlreadyRegisteredEmail.subject=注册说明
+mails.sendSignUpEmail.subject=注册说明
+mails.welcomeEmail.subject=欢迎
+mails.passwordResetEmail.subject=密码重置说明
+mails.unknownEmail.subject=密码重置请求
+mails.passwordResetOk.subject=密码修改确认

@@ -1,0 +1,50 @@
+@(connected: Option[String])(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Websocket Chat-Room</title>
+    <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.min.css"))'>
+    <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
+    <link rel="stylesheet" media="screen" href='@routes.Assets.at("stylesheets/main.css")'>
+</head>
+<body>
+
+<div class="topbar">
+    <div class="fill">
+        <div class="container">
+            <a class="brand" href="@controllers.demo.routes.ChatRoomController.index()">Websocket Chat-Room</a>
+
+            @connected.map { username =>
+            <p class="pull-right">
+                Logged in as @username —
+                <a href="@controllers.demo.routes.ChatRoomController.index()">Disconnect</a>
+            </p>
+            }.getOrElse {
+            <form action="@controllers.demo.routes.ChatRoomController.chatRoom(None)" class="pull-right">
+                <input id="username" name="username" class="input-small" type="text" placeholder="Username">
+                <button class="btn" type="submit">Sign in</button>
+            </form>
+            }
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="content">
+        @content
+    </div>
+
+    <footer>
+        <p>
+            <a href="http://www.playframework.com">www.playframework.com</a>
+        </p>
+    </footer>
+
+</div>
+
+</body>
+</html>

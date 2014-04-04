@@ -1,0 +1,66 @@
+# App name
+appName=DreamPie
+
+# Login page
+login.title=Login
+login.instructions=Use your existing account on one of the following networks to log in.
+login.accessDenied=You denied access to your account. Please grant it to log in.
+login.errorLoggingIn=An error occurred while logging you in. Please try again.
+login.useEmailAndPassword=Or login using a username and password.
+login.useEmailAndPasswordOnly=Login using a username and password.
+login.signUp=If you don''t have an account with us yet you can sign up
+login.here=here
+login.invalidCredentials=The credentials you entered are not valid
+login.forgotPassword=Did you forget your password?
+
+# Sign up page
+signup.title=Sign Up
+signup.username=Username
+signup.rememberme=Rememberme
+signup.firstName=First Name
+signup.lastName=Last Name
+signup.email1=Email
+signup.email2=Email confirmation
+signup.password1=Password
+signup.password2=Password confirmation
+signup.createAccount=Create Account
+signup.cancel=Cancel
+signup.userNameAlreadyTaken=Username already taken
+signup.passwordsDoNotMatch=Passwords do not match
+signup.thankYouCheckEmail=Thank you. Please check your email for further instructions
+signup.invalidLink=The link you followed is invalid
+signup.signUpDone=Thank you for signing up.  You can log in now
+signup.invalidPassword=Enter at least {0} characters
+
+# Password reset
+password.title=Reset Password
+password.passwordUpdated=Your password was updated successfully
+password.reset=Reset Password
+password.error=There was a problem changing your password. Please try again
+
+# Password change
+passwordChange.title=Change Password
+passwordChange.currentPassword=Current Password
+passwordChange.newPassword1=New Password
+passwordChange.newPassword2=New Password Confirmation
+passwordChange.changeButton=Change
+passwordChange.invalidPassword=Invalid password
+passwordChange.ok=Your password was changed successfully
+passwordChange.okButton=Ok
+
+# Not authorized page
+notAuthorized.title=Not Authorized
+notAuthorized.message=You are not authorized to access that page
+
+#
+loginRequired=You need to log in to access that page.
+
+# Mails
+#
+mails.sendAlreadyRegisteredEmail.subject=Sign up instructions
+mails.sendSignUpEmail.subject=Sign up instructions
+mails.welcomeEmail.subject=Welcome
+mails.passwordResetEmail.subject=Password reset instructions
+mails.unknownEmail.subject=Password reset request
+mails.passwordResetOk.subject=Password change confirmation
+

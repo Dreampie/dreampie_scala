@@ -1,0 +1,63 @@
+@(captchaname: String)
+
+@import captchas.ReCaptcha._
+@import play.api.{Logger, Play}
+@import helper._
+
+@implicitFieldConstructor = @{ FieldConstructor(views.html.inputFieldConstructor.f) }
+@if(captchaname=="recaptcha"){
+
+<script type="text/javascript">
+    var RecaptchaOptions = {
+        theme: 'custom',
+        custom_theme_widget: 'recaptcha_widget'
+    };
+</script>
+
+<div id="recaptcha_widget" class="recaptcha-widget recaptcha_nothad_incorrect_sol recaptcha_isnot_showing_audio ">
+    <div id="recaptcha_image_main"><div id="recaptcha_image"></div></div>
+    <div class="recaptcha-main">
+        <label>
+            <strong>
+  <span id="recaptcha_instructions_image" class="recaptcha_only_if_image">
+  输入上述文字：
+  </span>
+  <span id="recaptcha_instructions_audio" class="recaptcha_only_if_audio">
+  输入您听到的字词：
+  </span>
+            </strong>
+            <span id="recaptcha_challenge_field_holder" style="display: none;"></span><input type="text"  class="form-control" id="recaptcha_response_field" name="recaptcha_response_field" autocomplete="off" class="">
+        </label>
+        <div class="recaptcha-buttons">
+            <a id="recaptcha_reload_btn" href="javascript:Recaptcha.reload()" title="获取新的验证方式">
+  <span>
+  获取新的验证方式
+  </span>
+            </a>
+            <a id="recaptcha_switch_audio_btn" class="recaptcha_only_if_image" href="javascript:Recaptcha.switch_type('audio');" title="获取音频验证">
+  <span>
+  获取音频验证
+  </span>
+            </a>
+            <a id="recaptcha_switch_img_btn" class="recaptcha_only_if_audio" href="javascript:Recaptcha.switch_type('image');" title="获取图片验证">
+  <span>
+  获取图片验证
+  </span>
+            </a>
+            <a id="recaptcha_whatsthis_btn" href="javascript:Recaptcha.showhelp()" title="帮助">
+                <span>帮助</span>
+            </a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=@publicKey">
+</script>
+<noscript>
+    <iframe src="http://www.google.com/recaptcha/api/noscript?k=@publicKey"
+            height="300" width="500" frameborder="0"></iframe>
+    <br>
+    <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+    </textarea>
+    <input type="hidden" name="recaptcha_response_field" value="manual_challenge">
+</noscript>
+}

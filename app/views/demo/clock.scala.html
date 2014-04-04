@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hello Clock!</title>
+
+    <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.min.css"))'>
+    <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap-responsive.min.css"))'>
+    <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
+    <link rel="stylesheet" media="screen" href='@routes.Assets.at("stylesheets/main.css")'>
+    <style type="text/css"> body {
+        padding-top: 60px;
+    } </style>
+</head>
+<body>
+<h1>Comet clock</h1>
+
+<h1 id="clock"></h1>
+
+<p>
+    Clock events are pushed from the Server using a Comet connection.
+</p>
+
+<script type="text/javascript" charset="utf-8">
+    // Called for each Comet message
+    var clockChanged = function (time) {
+        $('#clock').html(time.replace(/(\d)/g, '<span>$1</span>'))
+    }
+</script>
+
+<iframe id="comet" src="@controllers.demo.routes.ClockController.liveClock.unique"></iframe>
+</body>
