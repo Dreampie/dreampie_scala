@@ -53,26 +53,21 @@ object AppBuild extends Build {
       ++ Play2WarPlugin.play2WarSettings
       ++ net.virtualvoid.sbt.graph.Plugin.graphSettings)
       .settings(
+        publishTo := Some(Resolver.defaultLocal),
         //        publishTo := Some(
         //          "My resolver" at "http://mycompany.com/repo"
         //        ),
         //        credentials += Credentials(
         //          "Repo", "http://mycompany.com/repo", "admin", "admin123"
         //        ),
-        scalacOptions ++= Seq("-encoding", "UTF-8"),
+        scalacOptions := Seq("-deprecation", "-unchecked", "-encoding", "utf8"),
         scalaVersion in ThisBuild := "2.10.3",
         conflictWarning := ConflictWarning.disable,
         Play2WarKeys.servletVersion := "3.0",
-        resolvers ++= Seq(
-          "Akka Repository" at "http://repo.akka.io/releases/",
-          // Change this to point to your local play repository
-          "Objectify Play Repository" at "http://schaloner.github.com/releases/",
-          "Objectify Play Repository - snapshots" at "http://schaloner.github.com/snapshots/"
-          // resolvers += Resolver.url("Objectify Play Repository", url("http://schaloner.github.com/releases/"))(Resolver.ivyStylePatterns),
-          // resolvers += Resolver.url("Objectify Play Repository - snapshots", url("http://schaloner.github.com/snapshots/"))(Resolver.ivyStylePatterns)
-        ),
+//        resolvers ++= Seq(),
         testOptions in Test := Nil,
         //        jarName in assembly := "dreampie-front.jar",
+        jarName in assembly := s"${appName}-${appVersion}.jar",
         libraryDependencies ~= {
           _ map {
             case m if m.organization == "com.typesafe.play" =>
