@@ -64,7 +64,6 @@ object AppBuild extends Build {
         conflictWarning := ConflictWarning.disable,
         Play2WarKeys.servletVersion := "3.0",
         resolvers ++= Seq(
-          Classpaths.typesafeResolver,
           "Akka Repository" at "http://repo.akka.io/releases/",
           // Change this to point to your local play repository
           "Objectify Play Repository" at "http://schaloner.github.com/releases/",
