@@ -53,12 +53,21 @@ object AppBuild extends Build {
       ++ Play2WarPlugin.play2WarSettings
       ++ net.virtualvoid.sbt.graph.Plugin.graphSettings)
       .settings(
-        publishTo := Some(Resolver.defaultLocal),
+        //        publishTo := Some(Resolver.defaultLocal),
         //        publishTo := Some(
-        //          "My resolver" at "http://mycompany.com/repo"
+        //          "My github resolver" at "http://Dreampie.github.com/releases"
         //        ),
+        //        publishTo <<= version {
+        //          v: String =>
+        //            val nexus = "https://oss.sonatype.org/"
+        //            if (v.trim.endsWith("SNAPSHOT"))
+        //              Some("snapshots" at nexus + "content/repositories/snapshots")
+        //            else
+        //              Some("releases" at nexus + "service/local/staging/deploy/maven2")
+        //        },
+        //
         //        credentials += Credentials(
-        //          "Repo", "http://mycompany.com/repo", "admin", "admin123"
+        //          "Repo", "http://Dreampie.github.com/releases", "dreampie", "wangrenhui521"
         //        ),
         scalacOptions := Seq("-deprecation", "-unchecked", "-encoding", "utf8"),
         scalaVersion in ThisBuild := "2.10.3",
