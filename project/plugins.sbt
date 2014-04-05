@@ -19,7 +19,7 @@ addSbtPlugin("org.scalikejdbc" %% "scalikejdbc-mapper-generator" % "[1.7,)") //s
 logLevel := Level.Warn
 
 //addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.2.1")
-addSbtPlugin("com.typesafe.play" % "sbt-plugin" % Option(System.getProperty("play.version")).getOrElse("2.2.0"))
+addSbtPlugin("com.typesafe.play" % "sbt-plugin" % Option(System.getProperty("play.version")).getOrElse("2.2.1"))
 
 addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.1.2")
 

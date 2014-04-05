@@ -47,7 +47,7 @@ object AppBuild extends Build {
       "org.scalikejdbc" %% "scalikejdbc-test" % scalikejdbcVersion % "test" withSources(),
       "org.specs2" %% "specs2" % "2.1" % "test" withSources()
     )
-    play.Project(appName, appVersion, appDependencies, settings = buildSettings ++ sbtassembly.Plugin.assemblySettings
+    play.Project(appName, appVersion, appDependencies, settings = buildSettings ++ play.Project.playScalaSettings ++ sbtassembly.Plugin.assemblySettings
       ++ scalikejdbc.mapper.SbtPlugin.scalikejdbcSettings
       //      ++ com.earldouglas.xsbtwebplugin.WebPlugin.webSettings
       ++ Play2WarPlugin.play2WarSettings
@@ -64,7 +64,7 @@ object AppBuild extends Build {
         scalaVersion in ThisBuild := "2.10.3",
         conflictWarning := ConflictWarning.disable,
         Play2WarKeys.servletVersion := "3.0",
-//        resolvers ++= Seq(),
+        //        resolvers ++= Seq(),
         testOptions in Test := Nil,
         //        jarName in assembly := "dreampie-front.jar",
         jarName in assembly := s"${appName}-${appVersion}.jar",
