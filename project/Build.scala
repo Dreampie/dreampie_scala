@@ -1,7 +1,9 @@
-import sbt._, sbt.Keys._
-import sbtassembly.Plugin._
-import AssemblyKeys._
-import com.github.play2war.plugin._
+import sbt._
+import Keys._
+import play.Project._
+
+//import sbtassembly.Plugin._
+//import AssemblyKeys._
 
 object AppBuild extends Build {
 
@@ -18,7 +20,7 @@ object AppBuild extends Build {
       "org.scalikejdbc" %% "scalikejdbc-play-plugin" % scalikejdbcVersion withSources(),
       "org.scalikejdbc" %% "scalikejdbc-play-fixture-plugin" % scalikejdbcVersion withSources(),
       "com.h2database" % "h2" % h2Version withSources(),
-      "be.objectify" %% "deadbolt-scala" % "2.2-RC1" withSources(),
+      "be.objectify" %% "deadbolt-scala" % "2.2-RC2" withSources(),
       //      "org.elasticsearch" % "elasticsearch" % "1.0.1" withSources(),
       //      "com.clever-age" % "play2-elasticsearch" % "0.8.1" withSources(),
       "com.sksamuel.elastic4s" %% "elastic4s" % "1.0.1.1" withSources(),
@@ -47,13 +49,23 @@ object AppBuild extends Build {
       "org.scalikejdbc" %% "scalikejdbc-test" % scalikejdbcVersion % "test" withSources(),
       "org.specs2" %% "specs2" % "2.1" % "test" withSources()
     )
-    play.Project(appName, appVersion, appDependencies, settings = buildSettings ++ play.Project.playScalaSettings ++ sbtassembly.Plugin.assemblySettings
-      ++ scalikejdbc.mapper.SbtPlugin.scalikejdbcSettings
+    play.Project(appName, appVersion, appDependencies, settings = buildSettings ++ play.Project.playScalaSettings
+      //      ++ sbtassembly.Plugin.assemblySettings
+      //      ++ scalikejdbc.mapper.SbtPlugin.scalikejdbcSettings
       //      ++ com.earldouglas.xsbtwebplugin.WebPlugin.webSettings
-      ++ Play2WarPlugin.play2WarSettings
-      ++ net.virtualvoid.sbt.graph.Plugin.graphSettings)
+      //      ++ com.github.play2war.plugin.Play2WarPlugin.play2WarSettings
+      //      ++ net.virtualvoid.sbt.graph.Plugin.graphSettings
+    )
       .settings(
-        //        publishTo := Some(Resolver.defaultLocal),
+        resolvers ++= Seq(
+          "Akka Repository" at "http://repo.akka.io/releases/",
+          // Change this to point to your local play repository
+          "Objectify Play Repository" at "http://schaloner.github.com/releases/",
+          "Objectify Play Repository - snapshots" at "http://schaloner.github.com/snapshots/"
+        ),
+        publishArtifact in packageDoc := false,
+        publishArtifact in Test := false,
+        publishTo := Some(Resolver.defaultLocal),
         //        publishTo := Some(
         //          "My github resolver" at "http://Dreampie.github.com/releases"
         //        ),
@@ -72,11 +84,9 @@ object AppBuild extends Build {
         scalacOptions := Seq("-deprecation", "-unchecked", "-encoding", "utf8"),
         scalaVersion in ThisBuild := "2.10.3",
         conflictWarning := ConflictWarning.disable,
-        Play2WarKeys.servletVersion := "3.0",
-        //        resolvers ++= Seq(),
+        //        Play2WarKeys.servletVersion := "3.0",
         testOptions in Test := Nil,
         //        jarName in assembly := "dreampie-front.jar",
-        jarName in assembly := s"${appName}-${appVersion}.jar",
         libraryDependencies ~= {
           _ map {
             case m if m.organization == "com.typesafe.play" =>
@@ -88,29 +98,31 @@ object AppBuild extends Build {
               m.exclude("javax.servlet", "javax.servlet-api")
             case m => m
           }
-        },
-        mergeStrategy in assembly <<= (mergeStrategy in assembly) {
-          (old) => {
-            case s: String if s.startsWith("org/mozilla/javascript/") => MergeStrategy.first
-            case s: String if s.startsWith("jargs/gnu/") => MergeStrategy.first
-            case s: String if s.startsWith("scala/concurrent/stm") => MergeStrategy.first
-            case s: String if s.endsWith("ServerWithStop.class") => MergeStrategy.first // There is a scala trait and a Java interface
-            case s: String if s.startsWith("Routes") => MergeStrategy.first
-            case s: String if s.startsWith("controllers/") => MergeStrategy.first
-            case s: String if s.startsWith("conf/") => MergeStrategy.first
-            case s: String if s.startsWith("META-INF/") => MergeStrategy.first
-            case s: String if s.endsWith("spring.tooling") => MergeStrategy.first
-            case s: String if s.endsWith("messages") => MergeStrategy.concat
-            case "Global$.class" => MergeStrategy.first
-            case "routes" => MergeStrategy.first
-            case "deploy.json" => MergeStrategy.first
-            case "application.conf" => MergeStrategy.concat
-            case "application-logger.xml" => MergeStrategy.first
-            case "README" => MergeStrategy.first
-            case "CHANGELOG" => MergeStrategy.first
-            case x => old(x)
-          }
         }
+        //        ,
+        //        jarName in assembly := s"${appName}-${appVersion}.jar",
+        //        mergeStrategy in assembly <<= (mergeStrategy in assembly) {
+        //          (old) => {
+        //            case s: String if s.startsWith("org/mozilla/javascript/") => MergeStrategy.first
+        //            case s: String if s.startsWith("jargs/gnu/") => MergeStrategy.first
+        //            case s: String if s.startsWith("scala/concurrent/stm") => MergeStrategy.first
+        //            case s: String if s.endsWith("ServerWithStop.class") => MergeStrategy.first // There is a scala trait and a Java interface
+        //            case s: String if s.startsWith("Routes") => MergeStrategy.first
+        //            case s: String if s.startsWith("controllers/") => MergeStrategy.first
+        //            case s: String if s.startsWith("conf/") => MergeStrategy.first
+        //            case s: String if s.startsWith("META-INF/") => MergeStrategy.first
+        //            case s: String if s.endsWith("spring.tooling") => MergeStrategy.first
+        //            case s: String if s.endsWith("messages") => MergeStrategy.concat
+        //            case "Global$.class" => MergeStrategy.first
+        //            case "routes" => MergeStrategy.first
+        //            case "deploy.json" => MergeStrategy.first
+        //            case "application.conf" => MergeStrategy.concat
+        //            case "application-logger.xml" => MergeStrategy.first
+        //            case "README" => MergeStrategy.first
+        //            case "CHANGELOG" => MergeStrategy.first
+        //            case x => old(x)
+        //          }
+        //        }
       )
   }
 
