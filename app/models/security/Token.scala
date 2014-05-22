@@ -82,7 +82,7 @@ object Token extends SQLSyntaxSupport[Token] {
               createdAt: DateTime,
               expirationAt: DateTime,
               isSignUp: Boolean)(implicit session: DBSession = autoSession): Token = {
-    val id = withSQL {
+    withSQL {
       insert.into(Token).columns(
         column.uuid,
         column.username,
@@ -96,7 +96,7 @@ object Token extends SQLSyntaxSupport[Token] {
           expirationAt,
           isSignUp
         )
-    }.updateAndReturnGeneratedKey.apply()
+    }.update().apply()
 
     Token(
       uuid = uuid,

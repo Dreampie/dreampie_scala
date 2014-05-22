@@ -1,165 +1,581 @@
-2014-04-08 11:49:39,695 - [INFO] - from play in pool-6-thread-2 
+2014-05-07 12:07:34,891 - [INFO] - from play in pool-4-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-04-08 11:49:59,566 - [DEBUG] - from application in play-internal-execution-context-1 
+2014-05-07 12:10:27,600 - [DEBUG] - from application in play-internal-execution-context-1 
 Directory for migration files found. db/migration/default
 
-2014-04-08 11:50:03,083 - [INFO] - from com.googlecode.flyway.core.command.DbMigrate in play-internal-execution-context-1 
+2014-05-07 12:10:31,330 - [INFO] - from com.googlecode.flyway.core.command.DbMigrate in play-internal-execution-context-1 
 Current version of schema "PUBLIC": 1
 
-2014-04-08 11:50:03,083 - [INFO] - from com.googlecode.flyway.core.command.DbMigrate in play-internal-execution-context-1 
+2014-05-07 12:10:31,330 - [INFO] - from com.googlecode.flyway.core.command.DbMigrate in play-internal-execution-context-1 
 Schema "PUBLIC" is up to date. No migration necessary.
 
-2014-04-08 11:50:03,374 - [INFO] - from application in play-internal-execution-context-1 
+2014-05-07 12:10:31,628 - [INFO] - from application in play-internal-execution-context-1 
 [dreampie] loaded index plugin: index.IndexPlugin
 
-2014-04-08 11:50:03,411 - [INFO] - from application in play-internal-execution-context-1 
+2014-05-07 12:10:31,681 - [INFO] - from application in play-internal-execution-context-1 
 Elasticsearch : Settings  {client.transport.sniff=true}
 
-2014-04-08 11:50:03,413 - [INFO] - from application in play-internal-execution-context-1 
+2014-05-07 12:10:31,683 - [INFO] - from application in play-internal-execution-context-1 
 ElasticSearch : Starting in Local Mode
 
-2014-04-08 11:50:08,708 - [INFO] - from application in play-internal-execution-context-1 
+2014-05-07 12:10:36,532 - [INFO] - from application in play-internal-execution-context-1 
 ElasticSearch : Started in Local Mode
 
-2014-04-08 11:50:08,712 - [INFO] - from application in play-internal-execution-context-1 
+2014-05-07 12:10:36,533 - [INFO] - from application in play-internal-execution-context-1 
 [dreampie] loaded templates plugin: secure.templates.DefaultTemplatesPlugin
 
-2014-04-08 11:50:08,992 - [INFO] - from application in play-internal-execution-context-1 
+2014-05-07 12:10:36,721 - [INFO] - from application in play-internal-execution-context-1 
 [dreampie] loaded User provider: userpass
 
-2014-04-08 11:50:08,994 - [INFO] - from application in play-internal-execution-context-1 
+2014-05-07 12:10:36,723 - [INFO] - from application in play-internal-execution-context-1 
 [dreampie] loaded User provider: github
 
-2014-04-08 11:50:09,699 - [INFO] - from play in play-internal-execution-context-1 
+2014-05-07 12:10:37,180 - [INFO] - from play in play-internal-execution-context-1 
 Starting application default Akka system.
 
-2014-04-08 11:50:09,757 - [INFO] - from akka.event.slf4j.Slf4jLogger in play-akka.actor.default-dispatcher-7 
+2014-05-07 12:10:37,197 - [INFO] - from akka.event.slf4j.Slf4jLogger in play-akka.actor.default-dispatcher-5 
 Slf4jLogger started
 
-2014-04-08 11:50:09,765 - [INFO] - from application in play-internal-execution-context-1 
+2014-05-07 12:10:37,203 - [INFO] - from application in play-internal-execution-context-1 
 [dreampie] loaded user service: class services.DbUserService
 
-2014-04-08 11:50:09,766 - [INFO] - from application in play-internal-execution-context-1 
+2014-05-07 12:10:37,204 - [INFO] - from application in play-internal-execution-context-1 
 [dreampie] loaded event listener my_event_listener
 
-2014-04-08 11:50:09,796 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
+2014-05-07 12:10:37,226 - [DEBUG] - from application in play-akka.actor.default-dispatcher-4 
 [dreampie] calling deleteExpiredTokens()
 
-2014-04-08 11:50:10,409 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-7 
-[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-04-08 11:50:10.049'; (1 ms)
+2014-05-07 12:10:37,473 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-4 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 12:10:37.3'; (6 ms)
 
-2014-04-08 11:50:10,525 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-internal-execution-context-1 
+2014-05-07 12:10:37,609 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-internal-execution-context-1 
 [SQL Execution] select count(1) from sec_user u; (0 ms)
 
-2014-04-08 11:50:10,528 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-internal-execution-context-1 
+2014-05-07 12:10:37,612 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-internal-execution-context-1 
 [SQL Execution] select count(1) from sec_role r; (0 ms)
 
-2014-04-08 11:50:10,530 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-internal-execution-context-1 
+2014-05-07 12:10:37,614 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-internal-execution-context-1 
 [SQL Execution] select count(1) from sec_permission p; (0 ms)
 
-2014-04-08 11:50:10,570 - [INFO] - from application in play-internal-execution-context-1 
-[dreampie] user index is exist as true
+2014-05-07 12:10:37,664 - [INFO] - from application in play-internal-execution-context-1 
+[dreampie] user index is exist as false
 
-2014-04-08 11:50:10,652 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-internal-execution-context-1 
+2014-05-07 12:10:38,889 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-internal-execution-context-1 
 [SQL Execution] select u.id as i_on_u, u.username as u_on_u, u.providername as p1_on_u, u.email as e_on_u, u.mobile as m_on_u, u.password as p2_on_u, u.hasher as h_on_u, u.salt as s_on_u, u.avatar_url as au_on_u, u.first_name as fn1_on_u, u.last_name as ln_on_u, u.full_name as fn2_on_u, u.created_at as ca_on_u, u.updated_at as ua_on_u, u.deleted_at as da_on_u , i.id as i_on_i, i.user_id as ui_on_i, i.creator_id as ci_on_i, i.gender as g_on_i, i.created_at as ca_on_i, i.updated_at as ua_on_i, i.deleted_at as da_on_i , ur.id as i_on_ur, ur.user_id as ui_on_ur, ur.role_id as ri_on_ur , r.id as i1_on_r, r.name as n_on_r, r.value as v_on_r, r.intro as i2_on_r, r.created_at as ca_on_r, r.updated_at as ua_on_r, r.deleted_at as da_on_r , rp.id as i_on_rp, rp.role_id as ri_on_rp, rp.permission_id as pi_on_rp , p.id as i1_on_p, p.name as n_on_p, p.value as v_on_p, p.url as u_on_p, p.intro as i2_on_p, p.created_at as ca_on_p, p.updated_at as ua_on_p, p.deleted_at as da_on_p from sec_user u left join sec_user_info i on i.user_id = u.id and i.deleted_at is null left join sec_user_role ur on ur.user_id = u.id left join sec_role r on ur.role_id = r.id and r.deleted_at is null left join sec_role_permission rp on rp.role_id = r.id left join sec_permission p on rp.permission_id = p.id where u.deleted_at is null; (0 ms)
 
-2014-04-08 11:50:11,647 - [INFO] - from play in play-internal-execution-context-1 
+2014-05-07 12:10:40,172 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2014-04-08 11:50:11,952 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
-GET / took 184ms and returned 200
+2014-05-07 12:10:40,754 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
+GET / took 296ms and returned 200
 
-2014-04-08 11:50:14,686 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
-GET /webjars/bootstrap/3.1.1/css/bootstrap-theme.min.css took 79ms and returned 304
+2014-05-07 12:10:45,141 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
+GET /assets/javascripts/routes took 2256ms and returned 200
 
-2014-04-08 11:50:14,688 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
-GET /webjars/bootstrap/3.1.1/css/bootstrap.min.css took 76ms and returned 304
+2014-05-07 12:10:45,921 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
+GET /webjars/bootstrap/3.1.1/css/bootstrap.min.css took 2575ms and returned 200
 
-2014-04-08 11:50:14,690 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
-GET /webjars/font-awesome/4.0.3/css/font-awesome.min.css took 75ms and returned 304
+2014-05-07 12:10:45,922 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
+GET /assets/stylesheets/main.min.css took 1993ms and returned 200
 
-2014-04-08 11:50:14,699 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
-GET /webjars/underscorejs/1.5.2/underscore-min.js took 9ms and returned 304
+2014-05-07 12:10:45,922 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
+GET /webjars/font-awesome/4.0.3/css/font-awesome.min.css took 1991ms and returned 200
 
-2014-04-08 11:50:14,704 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
-GET /webjars/jquery/1.11.0/jquery.min.js took 96ms and returned 304
+2014-05-07 12:10:45,929 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
+GET /webjars/bootstrap/3.1.1/css/bootstrap-theme.min.css took 2196ms and returned 200
 
-2014-04-08 11:50:14,721 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
-GET /assets/javascripts/main/jquery.unveil.min.js took 4ms and returned 304
+2014-05-07 12:10:45,932 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+GET /webjars/jquery/1.11.0/jquery.min.js took 2283ms and returned 200
 
-2014-04-08 11:50:14,727 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
-GET /assets/javascripts/main/jquery.scrollUp.min.js took 2ms and returned 304
+2014-05-07 12:10:45,937 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
+GET /webjars/underscorejs/1.5.2/underscore-min.js took 778ms and returned 200
 
-2014-04-08 11:50:14,732 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
-GET /webjars/backbonejs/1.1.0/backbone.min.js took 12ms and returned 304
+2014-05-07 12:10:46,000 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
+GET /webjars/backbonejs/1.1.0/backbone.min.js took 41ms and returned 200
 
-2014-04-08 11:50:14,751 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
-GET /assets/javascripts/routes took 108ms and returned 200
+2014-05-07 12:10:46,006 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
+GET /assets/javascripts/main/jquery.unveil.min.js took 17ms and returned 200
 
-2014-04-08 11:50:14,755 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
-GET /webjars/bootstrap/3.1.1/js/bootstrap.min.js took 29ms and returned 304
+2014-05-07 12:10:46,017 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+GET /webjars/bootstrap/3.1.1/js/bootstrap.min.js took 53ms and returned 200
 
-2014-04-08 11:50:14,757 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
-GET /assets/stylesheets/main.min.css took 150ms and returned 200
+2014-05-07 12:10:46,020 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
+GET /assets/javascripts/main/jquery.scrollUp.min.js took 11ms and returned 200
 
-2014-04-08 11:50:14,792 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
-GET /assets/images/app/1.jpg took 2ms and returned 304
+2014-05-07 12:10:46,042 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
+GET /assets/images/app/1.jpg took 4ms and returned 200
 
-2014-04-08 11:50:14,882 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
-GET /assets/images/app/2.jpg took 2ms and returned 304
+2014-05-07 12:10:46,112 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
+GET /assets/images/app/2.jpg took 4ms and returned 200
 
-2014-04-08 11:50:14,908 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
-GET /assets/images/app/3.jpg took 2ms and returned 304
+2014-05-07 12:10:46,118 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+GET /assets/images/app/3.jpg took 4ms and returned 200
 
-2014-04-08 11:50:15,239 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
+2014-05-07 12:10:46,294 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
+GET /assets/images/main/to_top.png took 4ms and returned 200
+
+2014-05-07 12:10:46,318 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
+GET /webjars/bootstrap/3.1.1/fonts/glyphicons-halflings-regular.woff took 25ms and returned 200
+
+2014-05-07 12:11:30,789 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+GET / took 25ms and returned 200
+
+2014-05-07 12:11:31,107 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
+GET /assets/javascripts/routes took 3ms and returned 200
+
+2014-05-07 12:11:31,156 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
+GET /assets/stylesheets/main.min.css took 55ms and returned 304
+
+2014-05-07 12:11:31,181 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
+GET /webjars/font-awesome/4.0.3/css/font-awesome.min.css took 24ms and returned 304
+
+2014-05-07 12:11:31,185 - [INFO] - from application in play-akka.actor.default-dispatcher-14 
+GET /webjars/bootstrap/3.1.1/css/bootstrap-theme.min.css took 57ms and returned 304
+
+2014-05-07 12:11:31,196 - [INFO] - from application in play-akka.actor.default-dispatcher-11 
+GET /webjars/backbonejs/1.1.0/backbone.min.js took 6ms and returned 304
+
+2014-05-07 12:11:31,198 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
+GET /webjars/underscorejs/1.5.2/underscore-min.js took 76ms and returned 304
+
+2014-05-07 12:11:31,203 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+GET /webjars/jquery/1.11.0/jquery.min.js took 95ms and returned 304
+
+2014-05-07 12:11:31,211 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+GET /webjars/bootstrap/3.1.1/js/bootstrap.min.js took 6ms and returned 304
+
+2014-05-07 12:11:31,238 - [INFO] - from application in play-akka.actor.default-dispatcher-14 
+GET /assets/javascripts/main/jquery.unveil.min.js took 7ms and returned 304
+
+2014-05-07 12:11:31,238 - [INFO] - from application in play-akka.actor.default-dispatcher-15 
+GET /assets/javascripts/main/jquery.scrollUp.min.js took 3ms and returned 304
+
+2014-05-07 12:11:31,242 - [INFO] - from application in play-akka.actor.default-dispatcher-15 
+GET /webjars/bootstrap/3.1.1/css/bootstrap.min.css took 119ms and returned 304
+
+2014-05-07 12:11:31,246 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+GET /assets/images/app/1.jpg took 10ms and returned 304
+
+2014-05-07 12:11:31,379 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+GET /assets/images/app/3.jpg took 3ms and returned 304
+
+2014-05-07 12:11:31,379 - [INFO] - from application in play-akka.actor.default-dispatcher-11 
+GET /assets/images/app/2.jpg took 3ms and returned 304
+
+2014-05-07 12:11:31,433 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
 GET /assets/images/main/to_top.png took 3ms and returned 304
 
-2014-04-08 11:50:15,356 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
-GET /webjars/bootstrap/3.1.1/fonts/glyphicons-halflings-regular.woff took 21ms and returned 304
+2014-05-07 12:11:31,436 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
+GET /webjars/bootstrap/3.1.1/fonts/glyphicons-halflings-regular.woff took 6ms and returned 304
 
-2014-04-08 11:50:15,882 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
-GET /assets/images/favicon.png took 4ms and returned 304
+2014-05-07 12:11:38,211 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
+GET /tologin took 34ms and returned 404
 
-2014-04-08 11:55:09,772 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2014-05-07 12:11:48,312 - [INFO] - from application in play-akka.actor.default-dispatcher-15 
+GET /signup took 69ms and returned 200
+
+2014-05-07 12:11:48,589 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+GET /assets/stylesheets/main.min.css took 3ms and returned 304
+
+2014-05-07 12:11:48,593 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+GET /webjars/bootstrap/3.1.1/css/bootstrap-theme.min.css took 5ms and returned 304
+
+2014-05-07 12:11:48,598 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+GET /webjars/jquery/1.11.0/jquery.min.js took 5ms and returned 304
+
+2014-05-07 12:11:48,601 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+GET /webjars/bootstrap/3.1.1/css/bootstrap.min.css took 3ms and returned 304
+
+2014-05-07 12:11:48,606 - [INFO] - from application in play-akka.actor.default-dispatcher-18 
+GET /webjars/font-awesome/4.0.3/css/font-awesome.min.css took 3ms and returned 304
+
+2014-05-07 12:11:48,609 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
+GET /assets/javascripts/routes took 1ms and returned 200
+
+2014-05-07 12:11:48,638 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+GET /webjars/underscorejs/1.5.2/underscore-min.js took 8ms and returned 304
+
+2014-05-07 12:11:48,650 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+GET /assets/javascripts/main/jquery.scrollUp.min.js took 20ms and returned 304
+
+2014-05-07 12:11:48,666 - [INFO] - from application in play-akka.actor.default-dispatcher-14 
+GET /assets/javascripts/main/jquery.unveil.min.js took 9ms and returned 304
+
+2014-05-07 12:11:48,668 - [INFO] - from application in play-akka.actor.default-dispatcher-14 
+GET /webjars/bootstrap/3.1.1/js/bootstrap.min.js took 11ms and returned 304
+
+2014-05-07 12:11:48,676 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+GET /webjars/backbonejs/1.1.0/backbone.min.js took 46ms and returned 304
+
+2014-05-07 12:11:48,724 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+GET /assets/images/main/to_top.png took 3ms and returned 304
+
+2014-05-07 12:11:58,279 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-15 
+[SQL Execution] select u.id as i_on_u, u.username as u_on_u, u.providername as p1_on_u, u.email as e_on_u, u.mobile as m_on_u, u.password as p2_on_u, u.hasher as h_on_u, u.salt as s_on_u, u.avatar_url as au_on_u, u.first_name as fn1_on_u, u.last_name as ln_on_u, u.full_name as fn2_on_u, u.created_at as ca_on_u, u.updated_at as ua_on_u, u.deleted_at as da_on_u , i.id as i_on_i, i.user_id as ui_on_i, i.creator_id as ci_on_i, i.gender as g_on_i, i.created_at as ca_on_i, i.updated_at as ua_on_i, i.deleted_at as da_on_i , ur.id as i_on_ur, ur.user_id as ui_on_ur, ur.role_id as ri_on_ur , r.id as i1_on_r, r.name as n_on_r, r.value as v_on_r, r.intro as i2_on_r, r.created_at as ca_on_r, r.updated_at as ua_on_r, r.deleted_at as da_on_r , rp.id as i_on_rp, rp.role_id as ri_on_rp, rp.permission_id as pi_on_rp , p.id as i1_on_p, p.name as n_on_p, p.value as v_on_p, p.url as u_on_p, p.intro as i2_on_p, p.created_at as ca_on_p, p.updated_at as ua_on_p, p.deleted_at as da_on_p from sec_user u left join sec_user_info i on i.user_id = u.id and i.deleted_at is null left join sec_user_role ur on ur.user_id = u.id left join sec_role r on ur.role_id = r.id and r.deleted_at is null left join sec_role_permission rp on rp.role_id = r.id left join sec_permission p on rp.permission_id = p.id where u.email = 'wangrenhui1990@hotmal.com' and u.deleted_at is null; (0 ms)
+
+2014-05-07 12:11:58,299 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-15 
+[SQL Execution] select u.id as i_on_u, u.username as u_on_u, u.providername as p1_on_u, u.email as e_on_u, u.mobile as m_on_u, u.password as p2_on_u, u.hasher as h_on_u, u.salt as s_on_u, u.avatar_url as au_on_u, u.first_name as fn1_on_u, u.last_name as ln_on_u, u.full_name as fn2_on_u, u.created_at as ca_on_u, u.updated_at as ua_on_u, u.deleted_at as da_on_u , i.id as i_on_i, i.user_id as ui_on_i, i.creator_id as ci_on_i, i.gender as g_on_i, i.created_at as ca_on_i, i.updated_at as ua_on_i, i.deleted_at as da_on_i , ur.id as i_on_ur, ur.user_id as ui_on_ur, ur.role_id as ri_on_ur , r.id as i1_on_r, r.name as n_on_r, r.value as v_on_r, r.intro as i2_on_r, r.created_at as ca_on_r, r.updated_at as ua_on_r, r.deleted_at as da_on_r , rp.id as i_on_rp, rp.role_id as ri_on_rp, rp.permission_id as pi_on_rp , p.id as i1_on_p, p.name as n_on_p, p.value as v_on_p, p.url as u_on_p, p.intro as i2_on_p, p.created_at as ca_on_p, p.updated_at as ua_on_p, p.deleted_at as da_on_p from sec_user u left join sec_user_info i on i.user_id = u.id and i.deleted_at is null left join sec_user_role ur on ur.user_id = u.id left join sec_role r on ur.role_id = r.id and r.deleted_at is null left join sec_role_permission rp on rp.role_id = r.id left join sec_permission p on rp.permission_id = p.id where u.email = 'wangrenhui1990@hotmal.com' and u.providername = 'userpass' and u.deleted_at is null; (1 ms)
+
+2014-05-07 12:11:58,325 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-15 
+[SQL Execution] insert into SEC_TOKEN (UUID, USERNAME, CREATED_AT, EXPIRATION_AT, IS_SIGN_UP) values ('0e8a9e0e-2ef3-4a28-9a33-c038516cc6da', 'wangrenhui1990@hotmal.com', '2014-05-07 12:11:58.304', '2014-05-07 13:11:58.304', false); (1 ms)
+
+2014-05-07 12:11:58,338 - [ERROR] - from play in play-akka.actor.default-dispatcher-15 
+Cannot invoke the action, eventually got an error: java.lang.IllegalStateException: Failed to retrieve the generated key. (template:insert into SEC_TOKEN (UUID, USERNAME, CREATED_AT, EXPIRATION_AT, IS_SIGN_UP) values (?, ?, ?, ?, ?))
+
+2014-05-07 12:11:58,417 - [ERROR] - from application in play-akka.actor.default-dispatcher-15 
+
+
+! @6i63plmn3 - Internal server error, for (POST) [/signup] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalStateException: Failed to retrieve the generated key. (template:insert into SEC_TOKEN (UUID, USERNAME, CREATED_AT, EXPIRATION_AT, IS_SIGN_UP) values (?, ?, ?, ?, ?))]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.1.jar:2.2.1]
+	at play.api.DefaultApplication.handleError(Application.scala:399) ~[play_2.10-2.2.1.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) ~[play_2.10-2.2.1.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) ~[play_2.10-2.2.1.jar:2.2.1]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) ~[play_2.10-2.2.1.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) ~[play_2.10-2.2.1.jar:2.2.1]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) ~[scala-library-2.10.3.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) ~[play-iteratees_2.10-2.2.1.jar:2.2.1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) ~[scala-library-2.10.3.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) ~[play-iteratees_2.10-2.2.1.jar:2.2.1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) ~[scala-library-2.10.3.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) ~[play-iteratees_2.10-2.2.1.jar:2.2.1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) ~[scala-library-2.10.3.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) ~[play-iteratees_2.10-2.2.1.jar:2.2.1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) ~[scala-library-2.10.3.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
+Caused by: java.lang.IllegalStateException: Failed to retrieve the generated key. (template:insert into SEC_TOKEN (UUID, USERNAME, CREATED_AT, EXPIRATION_AT, IS_SIGN_UP) values (?, ?, ?, ?, ?))
+	at scalikejdbc.DBSession$class.updateAndReturnSpecifiedGeneratedKey(DBSession.scala:361) ~[scalikejdbc_2.10-1.7.4.jar:1.7.4]
+	at scalikejdbc.ActiveSession.updateAndReturnSpecifiedGeneratedKey(DBSession.scala:420) ~[scalikejdbc_2.10-1.7.4.jar:1.7.4]
+	at scalikejdbc.SQLUpdateWithGeneratedKey$$anonfun$12.apply(SQL.scala:473) ~[scalikejdbc_2.10-1.7.4.jar:1.7.4]
+	at scalikejdbc.SQLUpdateWithGeneratedKey$$anonfun$12.apply(SQL.scala:473) ~[scalikejdbc_2.10-1.7.4.jar:1.7.4]
+	at scalikejdbc.DBConnection$$anonfun$autoCommit$1.apply(DB.scala:185) ~[scalikejdbc_2.10-1.7.4.jar:1.7.4]
+	at scalikejdbc.DBConnection$$anonfun$autoCommit$1.apply(DB.scala:184) ~[scalikejdbc_2.10-1.7.4.jar:1.7.4]
+	at scalikejdbc.LoanPattern$.using(LoanPattern.scala:29) ~[scalikejdbc_2.10-1.7.4.jar:1.7.4]
+	at scalikejdbc.package$.using(package.scala:76) ~[scalikejdbc_2.10-1.7.4.jar:1.7.4]
+	at scalikejdbc.DBConnection$class.autoCommit(DB.scala:184) ~[scalikejdbc_2.10-1.7.4.jar:1.7.4]
+	at scalikejdbc.DB.autoCommit(DB.scala:498) ~[scalikejdbc_2.10-1.7.4.jar:1.7.4]
+	at scalikejdbc.DB$$anonfun$autoCommit$2.apply(DB.scala:641) ~[scalikejdbc_2.10-1.7.4.jar:1.7.4]
+	at scalikejdbc.DB$$anonfun$autoCommit$2.apply(DB.scala:640) ~[scalikejdbc_2.10-1.7.4.jar:1.7.4]
+	at scalikejdbc.LoanPattern$.using(LoanPattern.scala:29) ~[scalikejdbc_2.10-1.7.4.jar:1.7.4]
+	at scalikejdbc.package$.using(package.scala:76) ~[scalikejdbc_2.10-1.7.4.jar:1.7.4]
+	at scalikejdbc.DB$.autoCommit(DB.scala:640) ~[scalikejdbc_2.10-1.7.4.jar:1.7.4]
+	at scalikejdbc.SQLUpdateWithGeneratedKey.apply(SQL.scala:473) ~[scalikejdbc_2.10-1.7.4.jar:1.7.4]
+	at models.security.Token$.create(Token.scala:99) ~[classes/:na]
+	at models.security.Token$.create(Token.scala:77) ~[classes/:na]
+	at services.DbUserService.save(DbUserService.scala:93) ~[classes/:na]
+	at secure.UserService$$anonfun$save$4.apply(UserService.scala:205) ~[classes/:na]
+	at secure.UserService$$anonfun$save$4.apply(UserService.scala:205) ~[classes/:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at secure.UserService$.save(UserService.scala:205) ~[classes/:na]
+	at services.TokenService$.createToken(TokenService.scala:31) ~[classes/:na]
+	at controllers.security.Registration$$anonfun$handleStartSignUp$1$$anonfun$apply$3.apply(Registration.scala:150) ~[classes/:na]
+	at controllers.security.Registration$$anonfun$handleStartSignUp$1$$anonfun$apply$3.apply(Registration.scala:142) ~[classes/:na]
+	at play.api.data.Form.fold(Form.scala:135) ~[play_2.10-2.2.1.jar:2.2.1]
+	at controllers.security.Registration$$anonfun$handleStartSignUp$1.apply(Registration.scala:138) ~[classes/:na]
+	at controllers.security.Registration$$anonfun$handleStartSignUp$1.apply(Registration.scala:136) ~[classes/:na]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.1.jar:2.2.1]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.1.jar:2.2.1]
+	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.1.jar:2.2.1]
+	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.1.jar:2.2.1]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.1.jar:2.2.1]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.1.jar:2.2.1]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.1.jar:2.2.1]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.1.jar:2.2.1]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.1.jar:2.2.1]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.1.jar:2.2.1]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.1.jar:2.2.1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.1.jar:2.2.1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.1.jar:2.2.1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.1.jar:2.2.1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.1.jar:2.2.1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10-2.2.1.jar:2.2.1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10-2.2.1.jar:2.2.1]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	... 6 common frames omitted
+
+2014-05-07 12:15:37,224 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
 [dreampie] calling deleteExpiredTokens()
 
-2014-04-08 11:55:09,775 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-6 
-[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-04-08 11:55:09.772'; (0 ms)
+2014-05-07 12:15:37,226 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-14 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 12:15:37.225'; (0 ms)
 
-2014-04-08 12:00:09,789 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2014-05-07 12:15:38,992 - [INFO] - from application in play-internal-execution-context-1 
+[dreampie] unloaded event listener my_event_listener
+
+2014-05-07 12:15:38,996 - [INFO] - from application in play-internal-execution-context-1 
+[dreampie] unloaded User provider: github
+
+2014-05-07 12:15:38,996 - [INFO] - from application in play-internal-execution-context-1 
+[dreampie] unloaded User provider: userpass
+
+2014-05-07 12:15:39,000 - [INFO] - from application in play-internal-execution-context-1 
+ElasticSearch : Plugin has stopped
+
+2014-05-07 12:15:39,010 - [INFO] - from play in play-internal-execution-context-1 
+Shutdown application default Akka system.
+
+2014-05-07 12:15:39,483 - [DEBUG] - from application in play-internal-execution-context-1 
+Directory for migration files found. db/migration/default
+
+2014-05-07 12:15:39,786 - [INFO] - from com.googlecode.flyway.core.command.DbMigrate in play-internal-execution-context-1 
+Current version of schema "PUBLIC": 1
+
+2014-05-07 12:15:39,786 - [INFO] - from com.googlecode.flyway.core.command.DbMigrate in play-internal-execution-context-1 
+Schema "PUBLIC" is up to date. No migration necessary.
+
+2014-05-07 12:15:39,940 - [INFO] - from application in play-internal-execution-context-1 
+[dreampie] loaded index plugin: index.IndexPlugin
+
+2014-05-07 12:15:39,941 - [INFO] - from application in play-internal-execution-context-1 
+Elasticsearch : Settings  {client.transport.sniff=true}
+
+2014-05-07 12:15:39,943 - [INFO] - from application in play-internal-execution-context-1 
+ElasticSearch : Starting in Local Mode
+
+2014-05-07 12:15:40,715 - [INFO] - from application in play-internal-execution-context-1 
+ElasticSearch : Started in Local Mode
+
+2014-05-07 12:15:40,716 - [INFO] - from application in play-internal-execution-context-1 
+[dreampie] loaded templates plugin: secure.templates.DefaultTemplatesPlugin
+
+2014-05-07 12:15:40,719 - [INFO] - from application in play-internal-execution-context-1 
+[dreampie] loaded User provider: userpass
+
+2014-05-07 12:15:40,720 - [INFO] - from application in play-internal-execution-context-1 
+[dreampie] loaded User provider: github
+
+2014-05-07 12:15:40,732 - [INFO] - from play in play-internal-execution-context-1 
+Starting application default Akka system.
+
+2014-05-07 12:15:40,736 - [INFO] - from application in play-internal-execution-context-1 
+[dreampie] loaded user service: class services.DbUserService
+
+2014-05-07 12:15:40,737 - [INFO] - from application in play-internal-execution-context-1 
+[dreampie] loaded event listener my_event_listener
+
+2014-05-07 12:15:40,750 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
 [dreampie] calling deleteExpiredTokens()
 
-2014-04-08 12:00:09,791 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-6 
-[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-04-08 12:00:09.789'; (1 ms)
+2014-05-07 12:15:40,803 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-internal-execution-context-1 
+[SQL Execution] select count(1) from sec_user u; (0 ms)
 
-2014-04-08 12:05:09,797 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2014-05-07 12:15:40,805 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-internal-execution-context-1 
+[SQL Execution] select count(1) from sec_role r; (0 ms)
+
+2014-05-07 12:15:40,808 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-internal-execution-context-1 
+[SQL Execution] select count(1) from sec_permission p; (0 ms)
+
+2014-05-07 12:15:40,814 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-14 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 12:15:40.753'; (0 ms)
+
+2014-05-07 12:15:40,849 - [INFO] - from application in play-internal-execution-context-1 
+[dreampie] user index is exist as true
+
+2014-05-07 12:15:40,894 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-internal-execution-context-1 
+[SQL Execution] select u.id as i_on_u, u.username as u_on_u, u.providername as p1_on_u, u.email as e_on_u, u.mobile as m_on_u, u.password as p2_on_u, u.hasher as h_on_u, u.salt as s_on_u, u.avatar_url as au_on_u, u.first_name as fn1_on_u, u.last_name as ln_on_u, u.full_name as fn2_on_u, u.created_at as ca_on_u, u.updated_at as ua_on_u, u.deleted_at as da_on_u , i.id as i_on_i, i.user_id as ui_on_i, i.creator_id as ci_on_i, i.gender as g_on_i, i.created_at as ca_on_i, i.updated_at as ua_on_i, i.deleted_at as da_on_i , ur.id as i_on_ur, ur.user_id as ui_on_ur, ur.role_id as ri_on_ur , r.id as i1_on_r, r.name as n_on_r, r.value as v_on_r, r.intro as i2_on_r, r.created_at as ca_on_r, r.updated_at as ua_on_r, r.deleted_at as da_on_r , rp.id as i_on_rp, rp.role_id as ri_on_rp, rp.permission_id as pi_on_rp , p.id as i1_on_p, p.name as n_on_p, p.value as v_on_p, p.url as u_on_p, p.intro as i2_on_p, p.created_at as ca_on_p, p.updated_at as ua_on_p, p.deleted_at as da_on_p from sec_user u left join sec_user_info i on i.user_id = u.id and i.deleted_at is null left join sec_user_role ur on ur.user_id = u.id left join sec_role r on ur.role_id = r.id and r.deleted_at is null left join sec_role_permission rp on rp.role_id = r.id left join sec_permission p on rp.permission_id = p.id where u.deleted_at is null; (0 ms)
+
+2014-05-07 12:15:41,098 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-05-07 12:15:41,143 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-14 
+[SQL Execution] select u.id as i_on_u, u.username as u_on_u, u.providername as p1_on_u, u.email as e_on_u, u.mobile as m_on_u, u.password as p2_on_u, u.hasher as h_on_u, u.salt as s_on_u, u.avatar_url as au_on_u, u.first_name as fn1_on_u, u.last_name as ln_on_u, u.full_name as fn2_on_u, u.created_at as ca_on_u, u.updated_at as ua_on_u, u.deleted_at as da_on_u , i.id as i_on_i, i.user_id as ui_on_i, i.creator_id as ci_on_i, i.gender as g_on_i, i.created_at as ca_on_i, i.updated_at as ua_on_i, i.deleted_at as da_on_i , ur.id as i_on_ur, ur.user_id as ui_on_ur, ur.role_id as ri_on_ur , r.id as i1_on_r, r.name as n_on_r, r.value as v_on_r, r.intro as i2_on_r, r.created_at as ca_on_r, r.updated_at as ua_on_r, r.deleted_at as da_on_r , rp.id as i_on_rp, rp.role_id as ri_on_rp, rp.permission_id as pi_on_rp , p.id as i1_on_p, p.name as n_on_p, p.value as v_on_p, p.url as u_on_p, p.intro as i2_on_p, p.created_at as ca_on_p, p.updated_at as ua_on_p, p.deleted_at as da_on_p from sec_user u left join sec_user_info i on i.user_id = u.id and i.deleted_at is null left join sec_user_role ur on ur.user_id = u.id left join sec_role r on ur.role_id = r.id and r.deleted_at is null left join sec_role_permission rp on rp.role_id = r.id left join sec_permission p on rp.permission_id = p.id where u.email = 'wangrenhui1990@hotmal.com' and u.deleted_at is null; (0 ms)
+
+2014-05-07 12:15:41,163 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-14 
+[SQL Execution] select u.id as i_on_u, u.username as u_on_u, u.providername as p1_on_u, u.email as e_on_u, u.mobile as m_on_u, u.password as p2_on_u, u.hasher as h_on_u, u.salt as s_on_u, u.avatar_url as au_on_u, u.first_name as fn1_on_u, u.last_name as ln_on_u, u.full_name as fn2_on_u, u.created_at as ca_on_u, u.updated_at as ua_on_u, u.deleted_at as da_on_u , i.id as i_on_i, i.user_id as ui_on_i, i.creator_id as ci_on_i, i.gender as g_on_i, i.created_at as ca_on_i, i.updated_at as ua_on_i, i.deleted_at as da_on_i , ur.id as i_on_ur, ur.user_id as ui_on_ur, ur.role_id as ri_on_ur , r.id as i1_on_r, r.name as n_on_r, r.value as v_on_r, r.intro as i2_on_r, r.created_at as ca_on_r, r.updated_at as ua_on_r, r.deleted_at as da_on_r , rp.id as i_on_rp, rp.role_id as ri_on_rp, rp.permission_id as pi_on_rp , p.id as i1_on_p, p.name as n_on_p, p.value as v_on_p, p.url as u_on_p, p.intro as i2_on_p, p.created_at as ca_on_p, p.updated_at as ua_on_p, p.deleted_at as da_on_p from sec_user u left join sec_user_info i on i.user_id = u.id and i.deleted_at is null left join sec_user_role ur on ur.user_id = u.id left join sec_role r on ur.role_id = r.id and r.deleted_at is null left join sec_role_permission rp on rp.role_id = r.id left join sec_permission p on rp.permission_id = p.id where u.email = 'wangrenhui1990@hotmal.com' and u.providername = 'userpass' and u.deleted_at is null; (0 ms)
+
+2014-05-07 12:15:41,175 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-14 
+[SQL Execution] insert into SEC_TOKEN (UUID, USERNAME, CREATED_AT, EXPIRATION_AT, IS_SIGN_UP) values ('73a74164-b1d1-4a13-9eb4-1eeb20c86799', 'wangrenhui1990@hotmal.com', '2014-05-07 12:15:41.166', '2014-05-07 13:15:41.166', false); (4 ms)
+
+2014-05-07 12:15:41,185 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
+[dreampie] sending email to wangrenhui1990@hotmal.com
+
+2014-05-07 12:15:41,186 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
+[dreampie] mail = [(None,Some(
+<html>
+<body>
+<p>Hello,</p>
+
+<p>Please follow this
+    <a href="http://localhost:9000/signup/73a74164-b1d1-4a13-9eb4-1eeb20c86799">link</a> to complete your registration.
+</p>
+</body>
+</html>))]
+
+2014-05-07 12:15:41,192 - [INFO] - from application in play-akka.actor.default-dispatcher-19 
+POST /signup took 66ms and returned 303
+
+2014-05-07 12:15:41,291 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
+current login
+
+2014-05-07 12:15:41,399 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
+[dreampie] assets controller = controllers.ReverseAssets
+
+2014-05-07 12:15:41,617 - [INFO] - from application in play-akka.actor.default-dispatcher-14 
+GET /login took 327ms and returned 200
+
+2014-05-07 12:15:41,869 - [INFO] - from application in play-akka.actor.default-dispatcher-14 
+GET /webjars/font-awesome/4.0.3/css/font-awesome.min.css took 29ms and returned 304
+
+2014-05-07 12:15:41,874 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
+GET /webjars/jquery/1.11.0/jquery.min.js took 34ms and returned 304
+
+2014-05-07 12:15:41,875 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
+GET /assets/stylesheets/main.min.css took 5ms and returned 304
+
+2014-05-07 12:15:41,886 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
+GET /webjars/bootstrap/3.1.1/css/bootstrap-theme.min.css took 9ms and returned 304
+
+2014-05-07 12:15:41,888 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
+GET /webjars/bootstrap/3.1.1/css/bootstrap.min.css took 10ms and returned 304
+
+2014-05-07 12:15:41,888 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
+GET /webjars/underscorejs/1.5.2/underscore-min.js took 10ms and returned 304
+
+2014-05-07 12:15:41,903 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
+GET /webjars/backbonejs/1.1.0/backbone.min.js took 4ms and returned 304
+
+2014-05-07 12:15:41,908 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
+GET /assets/javascripts/main/jquery.unveil.min.js took 5ms and returned 304
+
+2014-05-07 12:15:41,911 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
+GET /webjars/bootstrap/3.1.1/js/bootstrap.min.js took 4ms and returned 304
+
+2014-05-07 12:15:41,921 - [INFO] - from application in play-akka.actor.default-dispatcher-19 
+GET /assets/javascripts/routes took 15ms and returned 200
+
+2014-05-07 12:15:41,922 - [INFO] - from application in play-akka.actor.default-dispatcher-19 
+GET /assets/javascripts/main/jquery.scrollUp.min.js took 8ms and returned 304
+
+2014-05-07 12:15:41,976 - [INFO] - from application in play-akka.actor.default-dispatcher-19 
+GET /assets/images/providers/github.png took 60ms and returned 200
+
+2014-05-07 12:15:42,102 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
+GET /assets/images/main/recaptcha-sprite.png took 5ms and returned 200
+
+2014-05-07 12:15:43,288 - [INFO] - from application in play-akka.actor.default-dispatcher-24 
+GET /assets/images/main/to_top.png took 2ms and returned 304
+
+2014-05-07 12:20:40,733 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
 [dreampie] calling deleteExpiredTokens()
 
-2014-04-08 12:05:09,798 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-6 
-[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-04-08 12:05:09.797'; (0 ms)
+2014-05-07 12:20:40,735 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-23 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 12:20:40.734'; (0 ms)
 
-2014-04-08 12:10:09,804 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2014-05-07 12:25:40,759 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
 [dreampie] calling deleteExpiredTokens()
 
-2014-04-08 12:10:09,806 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-6 
-[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-04-08 12:10:09.805'; (1 ms)
+2014-05-07 12:25:40,761 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-23 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 12:25:40.76'; (0 ms)
 
-2014-04-08 12:15:09,809 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2014-05-07 12:30:40,740 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
 [dreampie] calling deleteExpiredTokens()
 
-2014-04-08 12:15:09,812 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-6 
-[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-04-08 12:15:09.81'; (0 ms)
+2014-05-07 12:30:40,741 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-23 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 12:30:40.74'; (0 ms)
 
-2014-04-08 12:20:09,821 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2014-05-07 12:35:40,766 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
 [dreampie] calling deleteExpiredTokens()
 
-2014-04-08 12:20:09,823 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-6 
-[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-04-08 12:20:09.822'; (0 ms)
+2014-05-07 12:35:40,769 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-23 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 12:35:40.767'; (0 ms)
 
-2014-04-08 12:25:09,826 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2014-05-07 12:40:40,758 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
 [dreampie] calling deleteExpiredTokens()
 
-2014-04-08 12:25:09,828 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-6 
-[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-04-08 12:25:09.827'; (0 ms)
+2014-05-07 12:40:40,760 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-23 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 12:40:40.759'; (0 ms)
+
+2014-05-07 12:45:40,765 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
+[dreampie] calling deleteExpiredTokens()
+
+2014-05-07 12:45:40,767 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-23 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 12:45:40.766'; (0 ms)
+
+2014-05-07 12:50:40,781 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
+[dreampie] calling deleteExpiredTokens()
+
+2014-05-07 12:50:40,783 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-23 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 12:50:40.782'; (0 ms)
+
+2014-05-07 12:55:40,772 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
+[dreampie] calling deleteExpiredTokens()
+
+2014-05-07 12:55:40,774 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-23 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 12:55:40.773'; (0 ms)
+
+2014-05-07 13:00:40,786 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
+[dreampie] calling deleteExpiredTokens()
+
+2014-05-07 13:00:40,789 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-23 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 13:00:40.787'; (0 ms)
+
+2014-05-07 13:05:40,781 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
+[dreampie] calling deleteExpiredTokens()
+
+2014-05-07 13:05:40,783 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-23 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 13:05:40.782'; (0 ms)
+
+2014-05-07 13:10:40,796 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
+[dreampie] calling deleteExpiredTokens()
+
+2014-05-07 13:10:40,798 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-23 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 13:10:40.797'; (0 ms)
+
+2014-05-07 13:15:40,799 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
+[dreampie] calling deleteExpiredTokens()
+
+2014-05-07 13:15:40,803 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-23 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 13:15:40.8'; (0 ms)
+
+2014-05-07 13:20:40,798 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
+[dreampie] calling deleteExpiredTokens()
+
+2014-05-07 13:20:40,801 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-23 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 13:20:40.799'; (1 ms)
+
+2014-05-07 13:25:40,799 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
+[dreampie] calling deleteExpiredTokens()
+
+2014-05-07 13:25:40,801 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-23 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 13:25:40.8'; (0 ms)
+
+2014-05-07 13:30:40,815 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
+[dreampie] calling deleteExpiredTokens()
+
+2014-05-07 13:30:40,817 - [INFO] - from scalikejdbc.StatementExecutor$$anon$1 in play-akka.actor.default-dispatcher-23 
+[SQL Execution] delete from SEC_TOKEN where EXPIRATION_AT < '2014-05-07 13:30:40.815'; (0 ms)
 
