@@ -49,7 +49,7 @@ object InitialData {
 
     if (User.countAll <= 0) {
       Seq(
-        User(1, "admin", "dreampie", null, null, "$2a$10$q5IvwSTS4XNA025F9ScCt.tTaavvdN6BgLjqDxZssxXhDP4YU/Tpu",
+        User(1, "admin", "dreampie_scala", null, null, "$2a$10$q5IvwSTS4XNA025F9ScCt.tTaavvdN6BgLjqDxZssxXhDP4YU/Tpu",
           "BCryptHasher", "$2a$10$q5IvwSTS4XNA025F9ScCt", null, "王", "", "", DateTime.now(), null, null, authMethod = AuthenticationMethod.UserPassword)
       ).foreach {
         user => User.create(user.username, user.providername, user.email, user.mobile, user.password, user.hasher,

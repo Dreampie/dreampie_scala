@@ -11,7 +11,7 @@ object AppBuild extends Build {
   lazy val h2Version = "1.3.174"
 
   lazy val app = {
-    val appName = "dreampie"
+    val appName = "dreampie_scala"
     val appVersion = "0.1-SNAPSHOT"
     val appDependencies = Seq(
       "org.scalikejdbc" %% "scalikejdbc" % scalikejdbcVersion withSources(),

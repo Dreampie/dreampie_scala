@@ -1,4 +1,4 @@
-------dreampie-------
+------dreampie_scala-------
 DROP TABLE IF EXISTS sec_user;
 DROP SEQUENCE IF EXISTS sec_user_id_seq;
 CREATE SEQUENCE sec_user_id_seq START WITH 1;
